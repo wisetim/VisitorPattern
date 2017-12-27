@@ -20,7 +20,8 @@ public class Client {
 //        System.out.println("\n========== 给CTO看的报表 ==========");
 //        System.out.println("========== 给Visitor1看的报表 ==========");
 //        report.showReport(new CTOVisitor());
-        System.out.println("========== 报表 ==========");
-        report.showReport();
+//        System.out.println("========== 报表 ==========");
+        report.showReport("报表.xls");
+        System.out.println("已经生成！");
     }
 }
