@@ -1,19 +1,28 @@
 package model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Tim on 2017/12/23
  */
 public class CEOVisitor implements Visitor {
     @Override
-    public void visit(Engineer engineer) {
-        System.out.println("工程师：" + engineer.getName()
-                + ", KPI：" + engineer.getKpi());
+    public Map visit(Engineer engineer) {
+       Map<String,String> a=new HashMap<>();
+       a.put("职务","工程师");
+       a.put("姓名", engineer.getName());
+        a.put("KPI", String.valueOf(engineer.getKpi()));
+return a;
     }
 
     @Override
-    public void visit(Manager manager) {
-        System.out.println("经理：" + manager.getName()
-                + ", KPI：" + manager.getKpi()
-                + ", 新产品数量：" + manager.getProducts());
+    public Map visit(Manager manager) {
+        Map<String,String> a=new HashMap<>();
+        a.put("职务","经理");
+        a.put("姓名",  manager.getName());
+        a.put("KPI", String.valueOf(manager.getKpi()));
+        a.put("新产品数量",String.valueOf(manager.getProducts()));
+        return a;
     }
 }

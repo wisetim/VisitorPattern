@@ -6,6 +6,14 @@
     <bean id="CTOVisitor" class="model.CTOVisitor"/>
     <bean id="report" class="model.BusinessReport">
         <property name="visitor" ref="CTOVisitor"/>
+        <property name="tableTitle">
+            <list>
+                <value >职务</value>
+                <value >姓名</value>
+                <value >代码行数</value>
+                <value>KPI</value>
+            </list>
+        </property>
     </bean>
 
 </beans>

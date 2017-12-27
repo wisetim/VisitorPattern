@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -14,8 +15,8 @@ public class Manager extends Staff {
     }
 
     @Override
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
+    public Map accept(Visitor visitor) {
+        return visitor.visit(this);
     }
 
     //一年内做的产品数量

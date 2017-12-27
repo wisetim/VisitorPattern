@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -22,5 +23,5 @@ public abstract class Staff {
         return kpi;
     }
 
-    public abstract void accept(Visitor visitor);
+    public abstract Map accept(Visitor visitor);
 }
